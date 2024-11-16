@@ -356,9 +356,6 @@ defmodule AshSqlite.DataLayer do
                 raise "Required an integer value, got: #{n}"
             end
         end
-
-      Mix.Task.run("ash_postgres.rollback", args ++ ["-r", inspect(repo), "-n", to_string(n)])
-      Mix.Task.reenable("ash_postgres.rollback")
     end
   end
 
